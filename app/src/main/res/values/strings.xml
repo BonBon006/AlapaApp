@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Alapa App</string>
+
+    <string name="isOn">ON</string>
+    <string name="isOff">OFF</string>
+    <string name="toggle">TOGGLE</string>
+
+    <!--My Texts-->
+    <string name="living_room">Living Room:</string>
+    <string name="dining_room">Dining Room:</string>
+    <string name="bed_room">Bed Room:</string>
+    <string name="bath_room1">Bath Room 1:</string>
+    <string name="bath_room2">Bath Room 2:</string>
+    <string name="outdoor_night_lights">Outdoor Night Lights:</string>
+    <string name="all_lights">Turn Off All Lights:</string>
+    <string name="paired_devices">Paired Devices:</string>
+    <string name="show_paired_devices_button">Show Paired Devices</string>
+    <string name="log_monitor">Log Monitor:</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="introduction_message">Welcome! Ensure bluetooth is on and device is paired with HC-05 Bluetooth Module.</string>
+
+    <string name="developer_notes">Developer Notes:</string>
+    <string name="my_notes">Commands:\n\n1 - Living Room\n2 - Dining Room\n3 - Bed Room\n4 - Bath Room 1\n5 - Bath Room 2\n6 - Outdoor Night Lights\n7 - Turn Off All Lights \n\n\nDeveloper: \nRaevon Thaddeus C. Bernardo</string>
+</resources>

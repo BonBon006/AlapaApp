@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:foregroundTint="@color/white"
+    tools:context=".Cloud">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/introduction_robot"
+            android:layout_width="153dp"
+            android:layout_height="162dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.155"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/apps" />
+
+        <ImageView
+            android:id="@+id/message_bubble"
+            android:layout_width="245dp"
+            android:layout_height="160dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.906"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/speech_bubble" />
+
+        <TextView
+            android:id="@+id/introduction_message"
+            android:layout_width="123dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="24dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/message_bubble"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@+id/message_bubble"
+            app:layout_constraintTop_toTopOf="@+id/message_bubble" />
+
+        <ListView
+            android:id="@+id/paired_devices_listview"
+            android:layout_width="382dp"
+            android:layout_height="308dp"
+            android:background="@color/material_dynamic_neutral20"
+            android:foregroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paired_devices_text" />
+
+        <TextView
+            android:id="@+id/paired_devices_text"
+            android:layout_width="127dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="44dp"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/introduction_robot" />
+
+        <ImageView
+            android:id="@+id/rfcomm_button"
+            android:layout_width="64dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/butler_button"
+            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintStart_toEndOf="@+id/introduction_robot"
+            app:layout_constraintTop_toBottomOf="@+id/UI_status"
+            app:srcCompat="@drawable/shield" />
+
+        <ImageView
+            android:id="@+id/butler_button"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="36dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UI_status"
+            app:srcCompat="@drawable/cpu" />
+
+        <Button
+            android:id="@+id/show_paired_devices_button"
+            android:layout_width="246dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paired_devices_listview" />
+
+        <ImageView
+            android:id="@+id/control_robot"
+            android:layout_width="81dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/show_paired_devices_button"
+            app:srcCompat="@drawable/controller" />
+
+        <TextView
+            android:id="@+id/connected_device_text"
+            android:layout_width="234dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="72dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toEndOf="@+id/control_robot"
+            app:layout_constraintTop_toBottomOf="@+id/show_paired_devices_button" />
+
+        <TextView
+            android:id="@+id/living_room_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/living_room_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/control_robot" />
+
+        <TextView
+            android:id="@+id/bed_room_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bed_room_button"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dining_room" />
+
+        <TextView
+            android:id="@+id/dining_room"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/dining_room_button"
+            app:layout_constraintHorizontal_bias="0.685"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/living_room_text" />
+
+        <TextView
+            android:id="@+id/bath_room1_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bath_room1_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bed_room_text" />
+
+        <TextView
+            android:id="@+id/bath_room2_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bath_room2_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bath_room1_text" />
+
+        <TextView
+            android:id="@+id/turn_off_all_lights_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/turn_off_all_lights_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outdoor_night_lights_text" />
+
+        <TextView
+            android:id="@+id/outdoor_night_lights_text"
+            android:layout_width="207dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/outdoor_night_lights_button"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bath_room2_text" />
+
+        <Button
+            android:id="@+id/bed_room_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dining_room_button" />
+
+        <Button
+            android:id="@+id/dining_room_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/living_room_button" />
+
+        <Button
+            android:id="@+id/bath_room1_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bed_room_button" />
+
+        <Button
+            android:id="@+id/outdoor_night_lights_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bath_room2_button" />
+
+        <Button
+            android:id="@+id/turn_off_all_lights_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outdoor_night_lights_button" />
+
+        <Button
+            android:id="@+id/bath_room2_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bath_room1_button" />
+
+        <Button
+            android:id="@+id/living_room_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/control_robot" />
+
+        <ListView
+            android:id="@+id/log_monitor"
+            android:layout_width="373dp"
+            android:layout_height="397dp"
+            android:background="@color/material_dynamic_neutral20"
+            android:foregroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_monitor_text" />
+
+        <TextView
+            android:id="@+id/log_monitor_text"
+            android:layout_width="142dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="44dp"
+            android:text="TextView"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/turn_off_all_lights_text" />
+
+        <ImageView
+            android:id="@+id/developer_notes_button"
+            android:layout_width="88dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="28dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/disconnect_button"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_monitor"
+            app:srcCompat="@drawable/chatbot" />
+
+        <ImageView
+            android:id="@+id/disconnect_button"
+            android:layout_width="81dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/log_monitor"
+            app:srcCompat="@drawable/unplugged" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/developer_notes_button" />
+
+        <TextView
+            android:id="@+id/UI_status"
+            android:layout_width="184dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/introduction_robot"
+            app:layout_constraintTop_toBottomOf="@+id/message_bubble" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
