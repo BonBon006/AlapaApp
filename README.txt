@@ -6,6 +6,6 @@ APP INSTALLATION INSTRUCTIONS:
 4.) Agree to Permission Checks.
 5.) Done.
 
-Developed by: Bon
+Developed by: Raevon
 
 Notes: The src folder is the entire repository except the Alapa App folder.
